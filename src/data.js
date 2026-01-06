@@ -17,7 +17,7 @@ export const experiences = [
     duration: 'Sep 2025 - Present',
     location: 'Dubai, UAE',
     description:
-      'Architect and deliver large-scale GPU/HPC and AI solutions on Oracle Cloud Infrastructure, driving innovation from proof of concept to production',
+      'Architect and deliver large-scale GPU/HPC and AI solutions on Oracle Cloud Infrastructure, driving innovation from proof of concept to production.',
     technologies: ['Infrastructure as Code (IaC)', 'Terraform', 'Docker', 'Slurm', 'Kubernetes', 'NIM', 'NeMo', 'Ray for Cluster', 'vLLM', 'OKE (Oracle Kubernetes Engine)']
   },
   {
