@@ -331,25 +331,18 @@ const About = () => {
         </div>
 
         {/* Flex container */}
-        <div className="flex flex-col md:flex-row gap-8 sm:gap-12 items-stretch">
-          {/* Image Side */}
-          <div className="w-full md:w-1/2 flex">
-            <div className="w-full bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl overflow-hidden flex">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12">
+          {/* Left Side: Image + Bullet Points */}
+          <div className="w-full lg:w-2/5 space-y-8">
+            {/* Image */}
+            <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl overflow-hidden">
               <img
-                className="w-full h-auto md:h-full object-cover"
+                className="w-full h-auto object-cover"
                 src="/images/main.jpg"
                 alt="Dr. Nitin Satpute"
                 loading="lazy"
               />
             </div>
-          </div>
-
-          {/* Text Side */}
-          <div className="w-full md:w-1/2 space-y-6 flex flex-col justify-between">
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              I have led and influenced technical sales and solutions engineering efforts at the intersection of advanced infrastructure, AI platforms, and enterprise customer engagements. My experience spans owning the technical narrative from early discovery through architecture design, proof-of-concept execution, and production deployment, while working closely with sales leadership and executive stakeholders. I have guided cross-functional technical teams—including solutions architects, platform engineers, and partners—supporting strategic customers deploying large-scale AI and ML workloads, and I routinely translate complex technical capabilities into business-relevant outcomes such as performance, cost efficiency, scalability, and operational simplicity. <br /> <br /> 
-              I have directly supported sales motions by shaping reference architectures, delivering executive-level technical briefings, and driving hands-on demonstrations and pilots. This includes leading end-to-end deployments of LLaMA and DeepSeek models on Kubernetes-based platforms (OCI OKE), enabling distributed LLM inference and training using NVIDIA A100/H100 GPUs with vLLM, SGLang, and NeMo, and advising customers on RDMA-enabled multi-node GPU scaling. These engagements required addressing enterprise needs such as security, authentication, observability, and production readiness while coordinating across product, engineering, and field teams and maintaining accountability for technical success.
-            </p>
 
             {/* Attended */}
             <div className="attended">
@@ -362,12 +355,64 @@ const About = () => {
                   "Deep Learning Training program by NVIDIA Deep Learning Institute, hosted by GPU Center of Excellence, IIT Bombay (Dec, 2016)",
                   '"The 2015 LOFAR Surveys Meeting" held at Leiden, Netherlands (Sept, 2015)',
                   '"AXIOM Face to Face Meet" held at BSC, Spain (Jun, 2015)',
-                  "Assisted Prof. Donald Reay from Heriot-Watt University, UK, in conducting Faculty Development Program on DSP for Educators at IIIT Bangalore, VNIT Nagpur, and NIT Patna (Mar & Sep, 2016)",
+                  // "Assisted Prof. Donald Reay from Heriot-Watt University, UK, in conducting Faculty Development Program on DSP for Educators at IIIT Bangalore, VNIT Nagpur, and NIT Patna (Mar & Sep, 2016)",
                 ].map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
               </ul>
             </div>
+          </div>
+
+          {/* Right Side: Paragraphs */}
+          <div className="w-full lg:w-3/5 space-y-6">
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              I am a Principal Cloud Architect – HPC/GPU & AI Platform Solutions
+              at Oracle, Dubai, with a PhD in Computer Science from the
+              University of Córdoba, Spain, under the Marie-Curie ESR
+              Fellowship, and an M.E. in Embedded Systems from BITS Pilani. My
+              technical expertise includes large language models (LLMs),
+              high-performance computing (HPC), GPU programming with CUDA, and
+              distributed AI. I have contributed to deep spiking neural
+              networks, medical image analysis, and generative AI using Falcon,
+              LLaMA, LangChain, and Hugging Face, and have collaborated with
+              leading research institutions such as IISc Bangalore, University
+              of Siena, NTNU, Oslo University Hospital, and Aarhus University.
+            </p>
+
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              My professional focus extends beyond research into building and
+              delivering enterprise-scale AI and cloud solutions. I have led and
+              influenced technical sales and solutions engineering efforts at
+              the intersection of advanced infrastructure, AI platforms, and
+              customer-driven innovation. This includes owning the technical
+              narrative from early discovery and solution architecture through
+              proof-of-concept execution and production deployment, while
+              working closely with sales leadership and executive stakeholders.
+            </p>
+
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              In practice, I have guided cross-functional teams of solutions
+              architects, platform engineers, and partners supporting strategic
+              customers deploying large-scale AI and ML workloads. My experience
+              includes GPU-accelerated infrastructure, Kubernetes-based
+              platforms (OCI OKE), and distributed LLM training and inference
+              using NVIDIA A100/H100 GPUs, vLLM, SGLang, and NeMo. I routinely
+              translate complex technical capabilities into business-relevant
+              outcomes such as performance, cost efficiency, scalability, and
+              operational simplicity.
+            </p>
+
+            <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              I have also directly supported enterprise sales motions by shaping
+              reference architectures, delivering executive-level technical
+              briefings, and leading hands-on demonstrations and pilots. This
+              includes end-to-end deployments of LLaMA and DeepSeek models on
+              OKE, advising customers on RDMA-enabled multi-node GPU scaling,
+              and addressing production-grade requirements such as security,
+              authentication, observability, and operational readiness—often
+              coordinating across product, engineering, and field teams to
+              ensure technical success.
+            </p>
           </div>
         </div>
       </div>
