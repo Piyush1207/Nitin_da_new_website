@@ -664,33 +664,33 @@ export const skillRows = [
 ];
 
 export const awards = [
-  {
+    {
     id: 1,
+    title: "Guest of Honour – Independence Day",
+    description:
+    "Invited as a Guest for 72nd Independence Day at South Point School, Nagpur, India (15 Aug 2018).",
+    year: 2018,
+  },
+  {
+    id: 2,
     title: "Marie Skłodowska-Curie Grant",
     description:
       "Awarded Marie Skłodowska-Curie grant from the project High Performance Soft-tissue Navigation (HiPerNav-H2020-MSCA-ITN 2016) in an Innovative Training Network (ITN).",
     year: 2016,
   },
   {
-    id: 2,
+    id: 3,
     title: "Funding from MeitY, India",
     description:
       "Conferred funding from Ministry of Electronics and Information Technology (MeitY), India (2016-2017) and funded acceptance from PUMPS 2015, Spain and ACACES 2015, Italy Summer Schools.",
     year: 2016,
   },
   {
-    id: 3,
+    id: 4,
     title: "GATE Scholarship & State Rank",
     description:
       "Received GATE scholarship (Aug 2011-July 2013) at BITS Pilani and full fee waiver at YCCE Nagpur for securing one of the top five ranks in the State Engineering Entrance Examination (2007-2011).",
     year: 2011,
-  },
-  {
-    id: 4,
-    title: "Guest of Honour – Independence Day",
-    description:
-      "Invited as a Guest for 72nd Independence Day at South Point School, Nagpur, India (15 Aug 2018).",
-    year: 2018,
   },
 ];
 

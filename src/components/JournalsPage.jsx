@@ -246,7 +246,7 @@ const JournalsPage = ({ setCurrentPage }) => {
               </div>
 
               {/* Achievements Section */}
-              <div className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 py-16 rounded-2xl">
+              <div className="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 py-16 rounded-2xl mt-12">
                 <motion.h3
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}

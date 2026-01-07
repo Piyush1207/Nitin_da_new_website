@@ -409,7 +409,7 @@ const About = () => {
               includes end-to-end deployments of LLaMA and DeepSeek models on
               OKE, advising customers on RDMA-enabled multi-node GPU scaling,
               and addressing production-grade requirements such as security,
-              authentication, observability, and operational readiness—often
+              authentication, observability, and operational readiness often
               coordinating across product, engineering, and field teams to
               ensure technical success.
             </p>
