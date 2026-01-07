@@ -333,7 +333,7 @@ const About = () => {
         {/* Flex container */}
         <div className="flex flex-col lg:flex-row gap-8 sm:gap-12">
           {/* Left Side: Image + Bullet Points */}
-          <div className="w-full lg:w-2/5 space-y-8">
+          <div className="w-full lg:w-3/5 space-y-7">
             {/* Image */}
             <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl overflow-hidden">
               <img
@@ -355,7 +355,7 @@ const About = () => {
                   "Deep Learning Training program by NVIDIA Deep Learning Institute, hosted by GPU Center of Excellence, IIT Bombay (Dec, 2016)",
                   '"The 2015 LOFAR Surveys Meeting" held at Leiden, Netherlands (Sept, 2015)',
                   '"AXIOM Face to Face Meet" held at BSC, Spain (Jun, 2015)',
-                  // "Assisted Prof. Donald Reay from Heriot-Watt University, UK, in conducting Faculty Development Program on DSP for Educators at IIIT Bangalore, VNIT Nagpur, and NIT Patna (Mar & Sep, 2016)",
+                  "Assisted Prof. Donald Reay from Heriot-Watt University, UK, in conducting Faculty Development Program on DSP for Educators at IIIT Bangalore, VNIT Nagpur, and NIT Patna (Mar & Sep, 2016)",
                 ].map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
