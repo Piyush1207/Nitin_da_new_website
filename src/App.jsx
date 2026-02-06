@@ -331,13 +331,13 @@ const About = () => {
         </div>
 
         {/* Flex container */}
-        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12">
+        <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 items-stretch">
           {/* Left Side: Image + Bullet Points */}
           <div className="w-full lg:w-3/5 space-y-7">
             {/* Image */}
-            <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl overflow-hidden h-full">
               <img
-                className="w-full h-auto object-cover"
+                className="w-full h-full object-cover"
                 src="/images/main.jpg"
                 alt="Dr. Nitin Satpute"
                 loading="lazy"
@@ -345,7 +345,7 @@ const About = () => {
             </div>
 
             {/* Attended */}
-            <div className="attended">
+            {/* <div className="attended">
               <h4 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-3">
                 Attended:
               </h4>
@@ -360,7 +360,7 @@ const About = () => {
                   <li key={index}>{item}</li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Side: Paragraphs */}

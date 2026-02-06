@@ -4,36 +4,57 @@
   overflow: hidden;
   position: relative;
   white-space: nowrap;
+  contain: layout paint;
 }
 
 .marquee-content {
   display: flex;
   gap: 1rem;
-  animation: marquee-left 20s linear infinite;
+
+  /* GPU acceleration */
+  will-change: transform;
+  transform: translate3d(0,0,0);
 }
 
+/* Desktop speed */
 .marquee-left .marquee-content {
-  animation: marquee-left 20s linear infinite;
+  animation: marquee-left 15s linear infinite;
 }
 
 .marquee-right .marquee-content {
-  animation: marquee-right 20s linear infinite;
+  animation: marquee-right 15s linear infinite;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .marquee-left .marquee-content,
+  .marquee-right .marquee-content {
+    animation-duration: 8s;
+  }
+}
+
+/* Mobile (faster) */
+@media (max-width: 640px) {
+  .marquee-left .marquee-content,
+  .marquee-right .marquee-content {
+    animation-duration: 5s;
+  }
 }
 
 @keyframes marquee-left {
-  0% {
+  from {
     transform: translateX(0%);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
 
 @keyframes marquee-right {
-  0% {
+  from {
     transform: translateX(-50%);
   }
-  100% {
+  to {
     transform: translateX(0%);
   }
 }

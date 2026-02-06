@@ -701,3 +701,39 @@ export const certificates = [
   { src: "/4.png", alt: "Image 4" },
   { src: "/5.png", alt: "Image 5" },
 ];
+
+export const engagements = [
+  {
+    id: 1,
+    description:
+      "MIT Global Startup Workshop (GSW) at Novotel Hyderabad Convention Centre",
+    location: "Hyderabad, India",
+    date: "Mar 2016",
+  },
+  {
+    id: 2,
+    description:
+      "Deep Learning Training Program by NVIDIA Deep Learning Institute, hosted by GPU Center of Excellence, IIT Bombay",
+    location: "Mumbai, India",
+    date: "Dec 2016",
+  },
+  {
+    id: 3,
+    description: "The 2015 LOFAR Surveys Meeting",
+    location: "Leiden, Netherlands",
+    date: "Sept 2015",
+  },
+  {
+    id: 4,
+    description: "AXIOM Face to Face Meet at Barcelona Supercomputing Center",
+    location: "Spain",
+    date: "Jun 2015",
+  },
+  {
+    id: 5,
+    description:
+      "Assisted Prof. Donald Reay (Heriot-Watt University, UK) in Faculty Development Program on DSP for Educators at IIIT Bangalore, VNIT Nagpur, and NIT Patna",
+    location: "India",
+    date: "Mar & Sept 2016",
+  },
+];

@@ -8,6 +8,7 @@ import {
   techTalks,
   awards,
   certificates,
+  engagements,
 } from "../data";
 import { motion } from "framer-motion";
 
@@ -52,6 +53,7 @@ const JournalsPage = ({ setCurrentPage }) => {
     "Conferences",
     "Seminars",
     "Tech Talks",
+    "Engagements",
     "Awards & Achievements",
   ];
 
@@ -62,6 +64,7 @@ const JournalsPage = ({ setCurrentPage }) => {
     ...conferences.map((item) => ({ ...item, type: "Conferences" })),
     ...seminars.map((item) => ({ ...item, type: "Seminars" })),
     ...techTalks.map((item) => ({ ...item, type: "Tech Talks" })),
+    ...engagements.map((item) => ({ ...item, type: "Engagements" })),
   ];
 
   // Group publications by type
@@ -71,6 +74,7 @@ const JournalsPage = ({ setCurrentPage }) => {
     Conferences: allPublications.filter((pub) => pub.type === "Conferences"),
     Seminars: allPublications.filter((pub) => pub.type === "Seminars"),
     "Tech Talks": allPublications.filter((pub) => pub.type === "Tech Talks"),
+    Engagements: allPublications.filter((pub) => pub.type === "Engagements"),
   };
 
   // === Render Publication Card ===
@@ -91,14 +95,16 @@ const JournalsPage = ({ setCurrentPage }) => {
                 pub.type === "Journals"
                   ? "bg-blue-900/30 text-blue-300 border border-blue-700"
                   : pub.type === "Posters"
-                  ? "bg-green-900/30 text-green-300 border border-green-700"
-                  : pub.type === "Conferences"
-                  ? "bg-orange-900/30 text-orange-300 border border-orange-700"
-                  : pub.type === "Seminars"
-                  ? "bg-purple-900/30 text-purple-300 border border-purple-700"
-                  : pub.type === "Tech Talks"
-                  ? "bg-yellow-900/30 text-yellow-300 border border-yellow-700"
-                  : "bg-gray-700 text-gray-300 border border-gray-600"
+                    ? "bg-green-900/30 text-green-300 border border-green-700"
+                    : pub.type === "Conferences"
+                      ? "bg-orange-900/30 text-orange-300 border border-orange-700"
+                      : pub.type === "Seminars"
+                        ? "bg-purple-900/30 text-purple-300 border border-purple-700"
+                        : pub.type === "Tech Talks"
+                          ? "bg-yellow-900/30 text-yellow-300 border border-yellow-700"
+                          : pub.type === "Engagements"
+                            ? "bg-cyan-900/30 text-cyan-300 border border-cyan-700"
+                            : "bg-gray-700 text-gray-300 border border-gray-600"
               }`}
             >
               {pub.type}
@@ -116,7 +122,7 @@ const JournalsPage = ({ setCurrentPage }) => {
           {(pub.publication || pub.event || pub.location) && (
             <p className="text-indigo-400 font-medium mb-3">
               {pub.publication || pub.event}
-              {pub.location ? `, ${pub.location}` : ""}
+              {pub.location ? ` ${pub.location}` : ""}
             </p>
           )}
           {pub.description && !pub.title && (
@@ -142,7 +148,7 @@ const JournalsPage = ({ setCurrentPage }) => {
   );
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-20">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 pt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-12">
@@ -301,7 +307,7 @@ const JournalsPage = ({ setCurrentPage }) => {
                     </motion.h2>
                     {groupedPublications[type].map(renderPublication)}
                   </div>
-                )
+                ),
             )
           )}
         </div>
