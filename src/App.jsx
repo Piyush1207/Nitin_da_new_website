@@ -335,7 +335,7 @@ const About = () => {
           {/* Left Side: Image + Bullet Points */}
           <div className="w-full lg:w-3/5 space-y-7">
             {/* Image */}
-        <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl overflow-hidden h-full">
+            <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-2xl overflow-hidden h-full">
               <img
                 className="w-full h-full object-cover"
                 src="/images/main.jpg"
@@ -445,7 +445,7 @@ const Education = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {[
             {
-              title: "PhD in Computer Science",
+              title: "Doctor of Philosophy(PhD) in Computer Science",
               duration: "Jun 2017 - Oct 2020",
               institution: "University of Córdoba (UCO)",
               location: "Córdoba, Spain",
@@ -460,7 +460,7 @@ const Education = () => {
               ],
             },
             {
-              title: "Master of Engineering in Embedded Systems",
+              title: "Master of Engineering(M.E.) in Embedded Systems",
               duration: "Aug 2011 - Jul 2013",
               institution: "Birla Institute of Technology and Science (BITS)",
               location: "Pilani, India",
@@ -471,7 +471,7 @@ const Education = () => {
             },
             {
               title:
-                "Bachelor of Engineering in Electronics and Telecommunication",
+                "Bachelor of Engineering(B.E.) in Electronics and Telecommunication",
               duration: "Aug 2007 - Jul 2011",
               institution: "Yeshwantrao Chavan College of Engineering (YCCE)",
               location: "Nagpur, India",
@@ -482,7 +482,7 @@ const Education = () => {
           ].map(
             (
               { title, duration, institution, location, details, secondments },
-              index
+              index,
             ) => (
               <div
                 key={index}
@@ -525,7 +525,7 @@ const Education = () => {
                   )}
                 </div>
               </div>
-            )
+            ),
           )}
         </div>
       </div>
@@ -594,13 +594,13 @@ const Experience = () => {
 const Projects = ({ setCurrentPage }) => {
   const handleProjectsClick = useCallback(
     () => setCurrentPage("projects"),
-    [setCurrentPage]
+    [setCurrentPage],
   );
 
   const selectedProjects = [
     projects.find((p) => p.organization === "Oracle Corporation"),
     projects.find(
-      (p) => p.organization === "Technology Innovation Institute (TII)"
+      (p) => p.organization === "Technology Innovation Institute (TII)",
     ),
     projects.find((p) => p.organization === "Aarhus University"),
     projects.find((p) => p.organization === "University of Córdoba"),
@@ -699,7 +699,7 @@ const Projects = ({ setCurrentPage }) => {
 const Publications = ({ setCurrentPage }) => {
   const handleJournalsClick = useCallback(
     () => setCurrentPage("journals"),
-    [setCurrentPage]
+    [setCurrentPage],
   );
 
   return (
@@ -896,39 +896,195 @@ const Skills = () => {
   );
 };
 
-// Footer Component
+// Footer Component - Redesigned to match Coding Ninjas layout style
 const Footer = () => {
   return (
-    <footer className="py-12 sm:py-16 lg:py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 py-12 px-6 md:px-12">
-        {/* Column 1 */}
+    <footer className="bg-gray-950 text-gray-300">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        {/* Column 1 - Logo + Contact + Offerings (spans 2 cols on large screens) */}
+        <div className="lg:col-span-2">
+          {/* Logo / Name */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm">
+              NS
+            </div>
+            <span className="text-white font-semibold text-lg tracking-tight">
+              Dr. Nitin Satpute
+            </span>
+          </div>
+
+          {/* Contact Us */}
+          <p className="text-sm font-semibold text-white mt-6 mb-3">
+            Contact us
+          </p>
+          <div className="space-y-2">
+            <a
+              href="mailto:nitin.satpute@example.com"
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-indigo-400 transition-colors"
+            >
+              <svg
+                className="w-4 h-4 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            nitin.r.satpute@gmail.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nitin-satpute-23314957/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-indigo-400 transition-colors"
+            >
+              <svg
+                className="w-4 h-4 flex-shrink-0"
+                fill="currentColor"
+                viewBox="0 0 448 512"
+              >
+                <path d="M100.28 448H7.4V148.9h92.88zM53.84 108C24.38 108 0 83.5 0 53.9A53.9 53.9 0 01107.78 54c0 29.6-24.38 54-53.94 54zM447.9 448h-92.68V305.4c0-34-12.1-57.2-42.4-57.2-23.1 0-36.8 15.5-42.8 30.6-2.2 5.2-2.8 12.4-2.8 19.7V448h-92.7s1.2-270.1 0-299.1h92.7v42.4c12.3-19 34.5-46 84-46 61.4 0 107.3 40 107.3 126.1z" />
+              </svg>
+              LinkedIn Profile
+            </a>
+          </div>
+
+          {/* Our Profiles / Offerings */}
+          <p className="text-sm font-semibold text-white mt-6 mb-3">
+            Our platforms
+          </p>
+          <div className="space-y-3">
+            <a
+              href="https://www.youtube.com/@nitinsatpute3125"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-red-400 transition-colors"
+            >
+              <svg
+                className="w-5 h-5 flex-shrink-0 text-red-500"
+                fill="currentColor"
+                viewBox="0 0 576 512"
+              >
+                <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597C14.933 166.95 14.933 256 14.933 256s0 89.05 11.412 131.917c6.281 23.65 24.787 42.276 48.284 48.597C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.947 48.284-48.597C561.067 345.05 561.067 256 561.067 256s0-89.05-11.412-131.917zM232.145 338.883V173.117L361.955 256z" />
+              </svg>
+              YouTube Channel
+            </a>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+            >
+              <svg
+                className="w-5 h-5 flex-shrink-0 text-gray-400"
+                fill="currentColor"
+                viewBox="0 0 496 512"
+              >
+                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.4-5.6-1.2-5.6-3.2 0-2 2.3-3.6 5.2-3.6 3.3-.4 5.6 1.2 5.6 3.2zm-31.8-1.8c-.8 1.6-3.2 2-5.6 1.2-2.3-.8-3.6-2.8-2.8-4.4.8-1.6 3.2-2 5.6-1.2 2.4.8 3.6 2.8 2.8 4.4zm44.4-1.2c-2.8.8-6-.4-6.8-2.8-1.2-2.4.4-5.2 3.2-6 2.8-.8 6 .4 6.8 2.8 1.2 2.4-.4 5.2-3.2 6zM244 8C109.2 8 0 117.6 0 252.4c0 108.8 70.8 201.2 169.2 233.6 12.8 2.4 17.2-5.6 17.2-12.4v-44c-68.8 14.8-83.2-33.2-83.2-33.2-11.6-29.2-28.4-36.8-28.4-36.8-23.6-16.4 1.6-16 1.6-16 25.6 1.6 39.6 25.6 39.6 25.6 22.8 39.6 59.6 28 74 21.2 2.4-16.4 9.6-28 17.6-34.4-54.8-6.4-112-27.2-112-121.6 0-27.2 9.6-49.6 25.6-67.2-2.8-6.4-11.2-32.4 2.4-67.2 0 0 20.8-6.8 68.8 25.6 19.6-5.6 40.8-8 61.6-8s42 2.4 61.6 8c48-32.4 68.8-25.6 68.8-25.6 13.6 34.8 5.2 60.8 2.4 67.2 16 17.6 25.6 40 25.6 67.2 0 94.4-57.6 115.2-112.8 121.6 9.6 8 18 23.6 18 47.2v70c0 6.8 4.8 12.8 17.6 12.4C425.2 453.6 496 361.2 496 252.4 496 117.6 386.8 8 252 8z" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        {/* Column 2 - Quick Links */}
         <div>
-          <h2 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-            Dr. Nitin Satpute
-          </h2>
-          <p className="mt-2 text-sm text-gray-400">
-            Principal Cloud Architect – HPC/GPU & AI Platform Solutions
+          <h3 className="text-sm font-semibold text-white mb-4">Quick Links</h3>
+          <ul className="space-y-2">
+            {[
+              "About",
+              "Education",
+              "Experience",
+              "Projects",
+              "Publications",
+              "Skills",
+            ].map((item) => (
+              <li key={item}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="text-sm text-gray-400 hover:text-indigo-400 transition-colors"
+                >
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Column 3 - Research Areas */}
+        <div>
+          <h3 className="text-sm font-semibold text-white mb-4">
+            Research Areas
+          </h3>
+          <ul className="space-y-2">
+            {[
+              "Large Language Models",
+              "GPU Computing",
+              "Computer Vision",
+              "Distributed Systems",
+            ].map((item) => (
+              <li key={item}>
+                <span
+                  href="#"
+                  className="text-sm text-gray-400 hover:text-indigo-400 transition-colors"
+                >
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Column 4 - Community / Misc */}
+        <div>
+          <h3 className="text-sm font-semibold text-white mb-4">Community</h3>
+          <ul className="space-y-2">
+            {["HPC Forums", "AI Research Blog", "Collaborate with me"].map(
+              (item) => (
+                <li key={item}>
+                  <span
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-indigo-400 transition-colors"
+                  >
+                    {item}
+                  </span>
+                </li>
+              ),
+            )}
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-sm text-gray-500">
+            Copyright © 2025 Dr. Nitin Satpute. All rights reserved.
           </p>
 
-          {/* Social Buttons */}
-          <div className="flex gap-3 mt-4">
+          {/* Social Icons - bottom right */}
+          <div className="flex items-center gap-4">
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/nitin-satpute-23314957/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full backdrop-blur-lg border border-indigo-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-md hover:shadow-xl hover:shadow-indigo-500/30 hover:scale-105 hover:-rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-indigo-500/50 hover:bg-gradient-to-tr hover:from-indigo-500/10 hover:to-black/40 group relative overflow-hidden"
+              className="text-gray-500 hover:text-indigo-400 transition-colors"
+              aria-label="LinkedIn"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
-              <div className="relative z-10">
-                <svg
-                  className="w-5 h-5 fill-current text-indigo-500 group-hover:text-indigo-400 transition-colors duration-300"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path d="M100.28 448H7.4V148.9h92.88zM53.84 108C24.38 108 0 83.5 0 53.9A53.9 53.9 0 01107.78 54c0 29.6-24.38 54-53.94 54zM447.9 448h-92.68V305.4c0-34-12.1-57.2-42.4-57.2-23.1 0-36.8 15.5-42.8 30.6-2.2 5.2-2.8 12.4-2.8 19.7V448h-92.7s1.2-270.1 0-299.1h92.7v42.4c12.3-19 34.5-46 84-46 61.4 0 107.3 40 107.3 126.1z" />
-                </svg>
-              </div>
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 448 512"
+              >
+                <path d="M100.28 448H7.4V148.9h92.88zM53.84 108C24.38 108 0 83.5 0 53.9A53.9 53.9 0 01107.78 54c0 29.6-24.38 54-53.94 54zM447.9 448h-92.68V305.4c0-34-12.1-57.2-42.4-57.2-23.1 0-36.8 15.5-42.8 30.6-2.2 5.2-2.8 12.4-2.8 19.7V448h-92.7s1.2-270.1 0-299.1h92.7v42.4c12.3-19 34.5-46 84-46 61.4 0 107.3 40 107.3 126.1z" />
+              </svg>
             </a>
 
             {/* YouTube */}
@@ -936,18 +1092,16 @@ const Footer = () => {
               href="https://www.youtube.com/@nitinsatpute3125"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full backdrop-blur-lg border border-red-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-md hover:shadow-xl hover:shadow-red-500/30 hover:scale-105 hover:rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-red-500/50 hover:bg-gradient-to-tr hover:from-red-500/10 hover:to-black/40 group relative overflow-hidden"
+              className="text-gray-500 hover:text-red-500 transition-colors"
+              aria-label="YouTube"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-red-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
-              <div className="relative z-10">
-                <svg
-                  className="w-5 h-5 fill-current text-red-500 group-hover:text-red-400 transition-colors duration-300"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 576 512"
-                >
-                  <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597C14.933 166.95 14.933 256 14.933 256s0 89.05 11.412 131.917c6.281 23.65 24.787 42.276 48.284 48.597C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.947 48.284-48.597C561.067 345.05 561.067 256 561.067 256s0-89.05-11.412-131.917zM232.145 338.883V173.117L361.955 256z" />
-                </svg>
-              </div>
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 576 512"
+              >
+                <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597C14.933 166.95 14.933 256 14.933 256s0 89.05 11.412 131.917c6.281 23.65 24.787 42.276 48.284 48.597C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.947 48.284-48.597C561.067 345.05 561.067 256 561.067 256s0-89.05-11.412-131.917zM232.145 338.883V173.117L361.955 256z" />
+              </svg>
             </a>
 
             {/* GitHub */}
@@ -955,95 +1109,19 @@ const Footer = () => {
               href="https://github.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full backdrop-blur-lg border border-gray-500/20 bg-gradient-to-tr from-black/60 to-black/40 shadow-md hover:shadow-xl hover:shadow-gray-500/30 hover:scale-105 hover:-rotate-2 active:scale-95 active:rotate-0 transition-all duration-300 ease-out cursor-pointer hover:border-gray-500/50 hover:bg-gradient-to-tr hover:from-gray-500/10 hover:to-black/40 group relative overflow-hidden"
+              className="text-gray-500 hover:text-white transition-colors"
+              aria-label="GitHub"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-out" />
-              <div className="relative z-10">
-                <svg
-                  className="w-5 h-5 fill-current text-gray-400 group-hover:text-white transition-colors duration-300"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 496 512"
-                >
-                  <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.4-5.6-1.2-5.6-3.2 0-2 2.3-3.6 5.2-3.6 3.3-.4 5.6 1.2 5.6 3.2zm-31.8-1.8c-.8 1.6-3.2 2-5.6 1.2-2.3-.8-3.6-2.8-2.8-4.4.8-1.6 3.2-2 5.6-1.2 2.4.8 3.6 2.8 2.8 4.4zm44.4-1.2c-2.8.8-6-.4-6.8-2.8-1.2-2.4.4-5.2 3.2-6 2.8-.8 6 .4 6.8 2.8 1.2 2.4-.4 5.2-3.2 6zM244 8C109.2 8 0 117.6 0 252.4c0 108.8 70.8 201.2 169.2 233.6 12.8 2.4 17.2-5.6 17.2-12.4v-44c-68.8 14.8-83.2-33.2-83.2-33.2-11.6-29.2-28.4-36.8-28.4-36.8-23.6-16.4 1.6-16 1.6-16 25.6 1.6 39.6 25.6 39.6 25.6 22.8 39.6 59.6 28 74 21.2 2.4-16.4 9.6-28 17.6-34.4-54.8-6.4-112-27.2-112-121.6 0-27.2 9.6-49.6 25.6-67.2-2.8-6.4-11.2-32.4 2.4-67.2 0 0 20.8-6.8 68.8 25.6 19.6-5.6 40.8-8 61.6-8s42 2.4 61.6 8c48-32.4 68.8-25.6 68.8-25.6 13.6 34.8 5.2 60.8 2.4 67.2 16 17.6 25.6 40 25.6 67.2 0 94.4-57.6 115.2-112.8 121.6 9.6 8 18 23.6 18 47.2v70c0 6.8 4.8 12.8 17.6 12.4C425.2 453.6 496 361.2 496 252.4 496 117.6 386.8 8 252 8z" />
-                </svg>
-              </div>
+              <svg
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 496 512"
+              >
+                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.4-5.6-1.2-5.6-3.2 0-2 2.3-3.6 5.2-3.6 3.3-.4 5.6 1.2 5.6 3.2zm-31.8-1.8c-.8 1.6-3.2 2-5.6 1.2-2.3-.8-3.6-2.8-2.8-4.4.8-1.6 3.2-2 5.6-1.2 2.4.8 3.6 2.8 2.8 4.4zm44.4-1.2c-2.8.8-6-.4-6.8-2.8-1.2-2.4.4-5.2 3.2-6 2.8-.8 6 .4 6.8 2.8 1.2 2.4-.4 5.2-3.2 6zM244 8C109.2 8 0 117.6 0 252.4c0 108.8 70.8 201.2 169.2 233.6 12.8 2.4 17.2-5.6 17.2-12.4v-44c-68.8 14.8-83.2-33.2-83.2-33.2-11.6-29.2-28.4-36.8-28.4-36.8-23.6-16.4 1.6-16 1.6-16 25.6 1.6 39.6 25.6 39.6 25.6 22.8 39.6 59.6 28 74 21.2 2.4-16.4 9.6-28 17.6-34.4-54.8-6.4-112-27.2-112-121.6 0-27.2 9.6-49.6 25.6-67.2-2.8-6.4-11.2-32.4 2.4-67.2 0 0 20.8-6.8 68.8 25.6 19.6-5.6 40.8-8 61.6-8s42 2.4 61.6 8c48-32.4 68.8-25.6 68.8-25.6 13.6 34.8 5.2 60.8 2.4 67.2 16 17.6 25.6 40 25.6 67.2 0 94.4-57.6 115.2-112.8 121.6 9.6 8 18 23.6 18 47.2v70c0 6.8 4.8 12.8 17.6 12.4C425.2 453.6 496 361.2 496 252.4 496 117.6 386.8 8 252 8z" />
+              </svg>
             </a>
           </div>
         </div>
-
-        {/* Column 2 */}
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-400">
-            Quick Links
-          </h3>
-          <ul className="mt-4 space-y-2">
-            <li>
-              <a href="#about" className="hover:text-indigo-300">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="#education" className="hover:text-indigo-300">
-                Education
-              </a>
-            </li>
-            <li>
-              <a href="#experience" className="hover:text-indigo-300">
-                Experience
-              </a>
-            </li>
-            <li>
-              <a href="#projects" className="hover:text-indigo-300">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a href="#publications" className="hover:text-indigo-300">
-                Publications
-              </a>
-            </li>
-            <li>
-              <a href="#skills" className="hover:text-indigo-300">
-                Skills
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Column 3 */}
-        <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-indigo-400">
-            Research Areas
-          </h3>
-          <ul className="mt-4 space-y-2">
-            <li>
-              <a href="#" className="hover:text-indigo-300">
-                Large Language Models
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-indigo-300">
-                GPU Computing
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-indigo-300">
-                Computer Vision
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-indigo-300">
-                Distributed Systems
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="border-t border-gray-700/50 mt-6">
-        <p className="text-center text-sm text-gray-500 py-4 flex justify-center items-center gap-4">
-          © 2025 Dr. Nitin Satpute. All rights reserved.
-        </p>
       </div>
     </footer>
   );
