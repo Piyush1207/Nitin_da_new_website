@@ -52,7 +52,7 @@ export const experiences = [
   {
     id: 5,
     company: 'University of Córdoba',
-    position: 'Marie Curie Researcher in GPU Picasso Optimization',
+    position: 'Marie Curie Researcher in GPU Performance Optimization',
     duration: 'Jun 2017 - Aug 2020',
     location: 'Córdoba, Spain',
     description:

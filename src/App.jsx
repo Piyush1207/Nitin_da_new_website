@@ -181,11 +181,10 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
           ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
@@ -790,9 +789,8 @@ const Skills = () => {
           {skillRows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className={`marquee ${
-                rowIndex % 2 === 0 ? "marquee-left" : "marquee-right"
-              }`}
+              className={`marquee ${rowIndex % 2 === 0 ? "marquee-left" : "marquee-right"
+                }`}
             >
               <div className="marquee-content">
                 {row.map((skill, index) => {
@@ -936,7 +934,7 @@ const Footer = () => {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-            nitin.r.satpute@gmail.com
+              nitin.r.satpute@gmail.com
             </a>
             <a
               href="https://www.linkedin.com/in/nitin-satpute-23314957/"
