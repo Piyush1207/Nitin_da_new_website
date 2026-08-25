@@ -113,7 +113,7 @@ const JournalsPage = ({ setCurrentPage }) => {
               {pub.year || pub.date}
             </span>
           </div>
-          <h3 className="text-xl font-bold text-white mb-3 hover:text-indigo-400 transition">
+          <h3 className="text-xl font-bold text-white mb-3">
             {pub.title || pub.description}
           </h3>
           {pub.authors && (
